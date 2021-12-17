@@ -1,0 +1,46 @@
+@import "../../../global.scss";
+
+.work-item {
+    flex: 50rem;
+    height: 25rem;
+    background-color: $dark-color;
+    cursor: pointer;
+    transition: 0.4s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    opacity: 0;
+
+    &.fade {
+        animation: opacityItem 1s linear forwards;
+
+        @keyframes opacityItem {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @for $i from 1 through 6 {
+            &:nth-child(#{$i}n) {
+                animation-delay: #{$i * 0.15}s;
+            }
+        }
+    }
+
+    &:hover {
+        box-shadow: inset 0 0 20px $darkLight-color;
+    }
+
+    &-image {
+        height: auto;
+
+        img {
+            width: 28rem;
+            height: auto;
+        }
+    }
+}

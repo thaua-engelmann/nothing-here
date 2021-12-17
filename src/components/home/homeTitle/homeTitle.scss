@@ -1,0 +1,23 @@
+@import "../../../global.scss";
+
+.home-title {
+    line-height: 1.1;
+    letter-spacing: -0.3rem;
+
+    span {
+        font-size: 9rem;
+        font-weight: 800;
+        font-family: "Nunito Sans", sans-serif;
+        color: $white-color;
+        opacity: 0;
+
+        &.custom {
+            color: $primary-color;
+            text-shadow: -0.5rem 0 1px $secondary_color;
+            font-size: 13rem;
+            transform: rotate(-3deg) !important;
+            display: inline-block;
+            pointer-events: none;
+        }
+    }
+}

@@ -1,0 +1,40 @@
+@import "../../global.scss";
+
+.home {
+    position: relative;
+
+    &-text {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 2.4rem;
+        color: $darkLight-color;
+
+        p {
+            animation: fadeInUpBig 3s;
+        }
+
+        span {
+            color: $secondary-color;
+            font-weight: bold;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: $primary-color;
+            font-size: 2rem;
+            transition: 0.3s;
+            animation: fadeInUpBig 4s;
+
+            &:hover {
+                transform: scale(0.95);
+            }
+
+            a {
+                color: $dark-color;
+                font-weight: 600;
+                padding: 1.2rem 6rem;
+            }
+        }
+    }
+}

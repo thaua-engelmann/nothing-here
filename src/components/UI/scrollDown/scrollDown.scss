@@ -1,0 +1,28 @@
+.scroll-down {
+    position: absolute;
+    writing-mode: vertical-rl;
+    font-weight: bold;
+    color: aqua;
+    animation: upAndDown 1s linear infinite;
+    display: inline-block;
+    font-size: 1.8rem;
+    bottom: 5%;
+
+    &.right {
+        right: 0rem;
+    }
+
+    &.left {
+        left: 0rem;
+        display: none;
+    }
+}
+
+@keyframes upAndDown {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-1rem);
+    }
+}

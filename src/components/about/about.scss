@@ -1,0 +1,45 @@
+@import "../../global.scss";
+
+.about {
+  width: 100%;
+  padding-top: 13rem;
+
+  &-content {
+    display: flex;
+    flex-wrap: wrap;
+
+    @media (max-width: 1024px) {
+      &-left,
+      &-right {
+        flex: 100% !important;
+      }
+    }
+
+    &-left {
+      flex: 40%;
+      position: relative;
+
+      .scroll-down {
+        bottom: -9rem;
+      }
+
+      &-text {
+        font-size: 1.75rem;
+        line-height: 1.5;
+
+        p {
+          margin-bottom: 2rem;
+        }
+
+        span {
+          color: $secondary-color;
+          font-weight: 800;
+        }
+      }
+    }
+
+    &-right {
+      flex: 60%;
+    }
+  }
+}

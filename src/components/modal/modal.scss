@@ -1,0 +1,139 @@
+@import "../../global.scss";
+@import "../../components/UI/titleAnimation/titleAnimation.scss";
+
+.modal-project {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+
+    &.show {
+        visibility: visible;
+        opacity: 1;
+
+        .modal {
+            animation: rubberBand 1s;
+        }
+    }
+
+    .modal {
+        max-width: 90rem;
+        width: 85%;
+        background-color: #313236;
+        position: relative;
+        transition: 0.5s;
+
+        .close-modal {
+            position: absolute;
+            right: -1.5rem;
+            top: -1.5rem;
+            font-size: 4rem;
+            color: $secondary-color;
+            cursor: pointer;
+            z-index: 2;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+
+        &-content {
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+            height: 100%;
+
+            @media (max-width: 730px) {
+                &-left,
+                &-right {
+                    flex: 100% !important;
+                }
+            }
+
+            &-left {
+                flex: 0.5;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 4rem;
+
+                img {
+                    width: 30rem;
+                    height: auto;
+                }
+            }
+
+            &-right {
+                flex: 0.5;
+                background-color: #555;
+
+                .project-info {
+                    padding: 1rem;
+
+                    h3 {
+                        color: $darkLight-color;
+                    }
+
+                    &-title {
+                        h2 {
+                            letter-spacing: 0.2rem;
+                            margin: 0.5rem 0;
+                        }
+                    }
+
+                    &-techs {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 1rem;
+
+                        li {
+                            background-color: $dark-color;
+                            padding: 0.3rem 0.8rem;
+                        }
+                    }
+
+                    &-description {
+                        position: relative;
+
+                        &-text {
+                            overflow-y: scroll;
+                            max-height: 15rem;
+                            padding-right: 0.5rem;
+
+                            p {
+                                margin-bottom: 1.5rem;
+                            }
+
+                            a {
+                                color: $primary-color;
+                            }
+                        }
+                    }
+
+                    &-actions {
+                        display: flex;
+                        gap: 2rem;
+                        padding: 2rem 0;
+
+                        a {
+                            padding: 0.6rem 1.5rem;
+                            background-color: $white-color;
+                            color: $dark-color;
+                            display: flex;
+                            align-items: center;
+                            gap: 0.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

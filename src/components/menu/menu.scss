@@ -1,0 +1,13 @@
+@import "../../global.scss";
+
+.menu {
+    position: fixed;
+    right: 5%;
+    top: 3%;
+    z-index: 101;
+    display: none;
+
+    @media (max-width: 1050px) {
+        display: block;
+    }
+}

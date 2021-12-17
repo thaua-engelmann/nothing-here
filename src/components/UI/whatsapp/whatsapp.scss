@@ -1,0 +1,11 @@
+.whatsapp-icon {
+    position: fixed;
+    right: 4rem;
+    bottom: 4rem;
+
+    &-link {
+        font-size: 5rem;
+        color: springgreen;
+        text-shadow: 0 0 1rem springgreen;
+    }
+}

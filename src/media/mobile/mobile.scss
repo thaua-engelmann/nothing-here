@@ -1,0 +1,80 @@
+html {
+  // iPad pro;
+  @media (max-width: 1024px) {
+    font-size: 13.5px;
+    overflow-x: hidden;
+
+    .squares {
+      top: -9rem;
+      right: -7rem;
+      transform: rotate(-25deg);
+    }
+
+    .music-toggle {
+      top: 13rem;
+    }
+
+    .about-content-right-skills {
+      margin-top: 5rem;
+    }
+
+    .scroll-down.left {
+      display: block;
+    }
+
+    .work-content-text {
+      max-width: 100%;
+    }
+
+    .contact-content {
+      &-left,
+      &-right {
+        flex: 100%;
+      }
+    }
+  }
+
+  @media (max-width: 1000px) {
+    font-size: 11px;
+  }
+
+  @media (max-width: 790px) {
+    font-size: 9.5px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 8.8px;
+
+    .home-title span {
+      font-size: 6.3rem;
+
+      &.custom {
+        font-size: 9rem;
+      }
+    }
+
+    .contact {
+      padding-top: 5rem;
+    }
+  }
+
+  @media (max-width: 415px) {
+    font-size: 7.6px;
+  }
+
+  @media (max-width: 375px) {
+    font-size: 7.1px;
+
+    .home-title span {
+      font-size: 6.4rem;
+
+      &.custom {
+        font-size: 8.8rem;
+      }
+    }
+  }
+
+  @media (max-width: 350px) {
+    font-size: 6.25px;
+  }
+}
